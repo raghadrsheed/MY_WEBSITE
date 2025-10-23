@@ -1,0 +1,284 @@
+/* ===================================
+   🌐 القواعد العامة
+=================================== */
+body {
+  font-family: "Tajawal", "Cairo", sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  transition: direction 0.12s ease, text-align 0.12s ease;
+}
+
+/* ===================================
+   🧭 الهيدر (Header)
+=================================== */
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-center {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  order: 0;
+}
+
+.logo-wrapper img {
+  width: 35px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#langFlag {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+#langFlag:hover {
+  transform: scale(1.06);
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+.navbar-nav .nav-link:hover {
+  background: #006688;
+  color: #fff;
+}
+.navbar-nav .nav-link.active {
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+  color: #fff;
+}
+
+/* زر الوضع الليلي */
+.theme-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+.theme-btn:hover {
+  transform: scale(1.2);
+  color: #ffd700;
+}
+
+/* ===================================
+   ✉️ صفحة التواصل (Contact)
+=================================== */
+.contact-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+/* ===================================
+   👥 صفحة من نحن (About)
+=================================== */
+.about-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  padding: 30px;
+}
+
+.team-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+}
+
+.team-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.policy-list li::marker {
+  color: #0d6efd;
+}
+
+/* ===================================
+   🏠 الصفحة الرئيسية (Index)
+=================================== */
+/* Slider */
+.carousel-item img {
+  border-radius: 10px;
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Categories */
+.badge-outline {
+  display: inline-block;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  background: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  margin: 6px;
+  font-size: 16px;
+  cursor: default;
+  transition: all 0.2s ease;
+}
+.badge-outline:hover {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* Event cards */
+.event-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  transition: transform 0.2s ease;
+}
+.event-card:hover {
+  transform: scale(1.02);
+}
+.event-card img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+.event-card h5 {
+  font-weight: 600;
+}
+.event-meta {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* ===================================
+   📅 صفحة الفعاليات (Events)
+=================================== */
+.filter-bar input,
+.filter-bar select {
+  border-radius: 6px;
+}
+
+/* ===================================
+   📍 صفحة تفاصيل الفعالية (Event Details)
+=================================== */
+.map img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===================================
+   ⚙️ الفوتر (Footer)
+=================================== */
+footer {
+  border-top: 1px solid #444;
+  font-size: 14px;
+  padding-bottom: 16px;
+}
+
+/* ===================================
+   🌙 الوضع الليلي (Dark Mode)
+=================================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* الهيدر والفوتر */
+body.dark-mode header.navbar {
+  background-color: #000 !important;
+}
+body.dark-mode footer {
+  background-color: #0d0d0d !important;
+  color: #ccc;
+  border-top-color: #333;
+}
+
+/* الكاردات والأقسام */
+body.dark-mode .about-section,
+body.dark-mode .contact-card,
+body.dark-mode .team-card,
+body.dark-mode .event-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05);
+}
+
+/* العناوين */
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+  color: #ffffff;
+}
+
+/* النصوص الثانوية */
+body.dark-mode .text-muted,
+body.dark-mode .event-meta {
+  color: #bbbbbb !important;
+}
+
+/* الروابط */
+body.dark-mode a {
+  color: #66b3ff;
+}
+body.dark-mode a:hover {
+  color: #3399ff;
+}
+
+/* العناصر الزرقاء */
+body.dark-mode .text-primary {
+  color: #66b2ff !important;
+}
+
+/* الأزرار */
+body.dark-mode .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+body.dark-mode .btn-outline-light {
+  border-color: #e6e6e6;
+  color: #e6e6e6;
+}
+
+/* الشارات */
+body.dark-mode .badge-outline {
+  border-color: #66b2ff;
+  color: #66b2ff;
+}
+body.dark-mode .badge-outline:hover {
+  background: #66b2ff;
+  color: #fff;
+}
+
+/* خطوط التحديد */
+body.dark-mode hr {
+  border-color: #333;
+}
